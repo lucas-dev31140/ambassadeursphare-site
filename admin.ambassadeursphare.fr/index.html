@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-hidden">
+    <div class="top-bar flex justify-between items-center px-4 py-2">
+        <div id="active-window-title">Bureau</div>
+        <div id="date-time"></div>
+    </div>
+    <div id="dock" class="dock flex justify-center items-center gap-2 p-2 rounded bg-black bg-opacity-60">
+        <div class="dock-item start-menu" onclick="showDesktop()">
+            <img src="start-icon.png" alt="Start" class="w-16 h-16">
+        </div>
+        <div class="dock-item" onclick="openWindow('window1')">
+            <img src="icon1.png" alt="Icon 1" class="w-16 h-16">
+        </div>
+        <div class="dock-item" onclick="openWindow('window2')">
+            <img src="icon2.png" alt="Icon 2" class="w-16 h-16">
+        </div>
+        <!-- Add more dock items here -->
+    </div>
+    <div id="desktop" class="desktop relative overflow-hidden p-4">
+        <div class="icon" onclick="openWindow('window1')">
+            <img src="icon1.png" alt="Icon 1" class="w-16 h-16">
+            <span>App 1</span>
+        </div>
+        <div class="icon" onclick="openWindow('window2')">
+            <img src="icon2.png" alt="Icon 2" class="w-16 h-16">
+            <span>App 2</span>
+        </div>
+        <!-- Add more desktop icons here -->
+        <div id="window1" class="window absolute bg-white rounded shadow z-30 overflow-hidden resize">
+            <div class="window-header flex justify-between items-center p-2 bg-blue-500 text-white cursor-move">
+                <span class="window-title">App 1</span>
+                <div>
+                    <button class="maximize-btn mx-1" onclick="maximizeWindow('window1')">⬜</button>
+                    <button class="close-btn mx-1" onclick="closeWindow('window1')">&times;</button>
+                </div>
+            </div>
+            <div class="window-content p-4">
+                <p>Bienvenue dans App 1!</p>
+            </div>
+        </div>
+        <div id="window2" class="window absolute bg-white rounded shadow z-30 overflow-hidden resize">
+            <div class="window-header flex justify-between items-center p-2 bg-blue-500 text-white cursor-move">
+                <span class="window-title">App 2</span>
+                <div>
+                    <button class="maximize-btn mx-1" onclick="maximizeWindow('window2')">⬜</button>
+                    <button class="close-btn mx-1" onclick="closeWindow('window2')">&times;</button>
+                </div>
+            </div>
+            <div class="window-content p-4">
+                <p>Bienvenue dans App 2!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

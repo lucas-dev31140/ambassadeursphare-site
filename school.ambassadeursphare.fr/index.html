@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-reset="" data-fr-scheme="light" data-fr-js="true" data-fr-theme="light"><head>
+    <meta charset="utf-8">
+    <base href="/eds/app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#465f9d">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#465f9d">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#383838">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
+    <style data-fullcalendar=""></style><link href="static/fix-is-link.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.dc4a1f4833b9eb9a.css"><style type="text/css"></style><style>:root{--theme-color: var(--blue-ecume-main-400);--theme-bg-color: var(--blue-ecume-main-400);--border-color: #e6e6e6;--fc-small-font-size: .85em;--fc-page-bg-color: #fff;--fc-neutral-bg-color: rgba(208, 208, 208, .3);--fc-neutral-text-color: #808080;--fc-border-color: #ddd;--fc-button-text-color: #ffffff;--fc-button-bg-color: #000091;--fc-button-border-color: #000091;--fc-button-hover-bg-color: rgba(0, 0, 246, .5);--fc-button-hover-border-color: rgba(0, 0, 246, .5);--fc-button-active-bg-color: rgba(0, 0, 246, .5);--fc-button-active-border-color: rgba(0, 0, 246, .5);--fc-event-bg-color: #3788d8;--fc-event-border-color: #3788d8;--fc-event-text-color: #fff;--fc-event-selected-overlay-color: rgba(0, 0, 0, .25);--fc-event-resizer-thickness: 8px;--fc-event-resizer-dot-total-width: 8px;--fc-event-resizer-dot-border-width: 1px;--fc-non-business-color: rgba(215, 215, 215, .3);--fc-bg-event-color: rgb(143, 223, 130);--fc-bg-event-opacity: .3;--fc-highlight-color: rgba(188, 232, 241, .3);--fc-today-bg-color: rgba(255, 220, 40, .15);--fc-now-indicator-color: red}:root[data-fr-theme=dark]{--theme-bg-color: #383838;--theme-color: var(--blue-ecume-main-400);--border-color: #6a6a6a}dsfr-header a.fr-btn.fr-icon-notification-3-fill{font-size:0!important;position:relative}dsfr-header a.fr-btn.fr-icon-notification-3-fill:before{color:var(--text-active-blue-france)}dsfr-header a.fr-btn.fr-icon-notification-3-fill:after{content:var(--notifications);display:flex;justify-content:center;-webkit-mask-image:none;mask-image:none;background-color:var(--background-active-red-marianne);border-radius:50%;color:var(--text-inverted-grey);font-size:.625rem;line-height:1.3rem;width:1.125rem;height:1.125rem;position:absolute;top:-1px;right:.625rem}dsfr-header nav ul li edu-item-link .fr-nav__link.active-link{position:relative;color:var(--text-active-blue-france)}dsfr-header nav ul li edu-item-link .fr-nav__link.active-link:before{position:absolute;top:auto;bottom:0;left:0;width:100%;height:2px;margin-top:0;content:"";display:block;background-color:var(--background-active-blue-france);--idle: transparent;--hover: var(--background-active-blue-france-hover);--active: var(--background-active-blue-france-active)}.block-ui-template{background-color:#f0f8ff;top:0;left:0;position:fixed}.bandeau-bleu{box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;margin:0 auto;max-width:75rem;width:100%;background-color:var(--theme-bg-color);color:#fff;padding:2.5rem 4rem;margin-bottom:2rem}.bandeau-bleu p{font-size:2rem;line-height:1;margin:0;color:#fff;font-weight:700}.bandeau-bleu a.fr-btn{color:#fff;box-shadow:inset 0 0 0 1px #fff}.bandeau-bleu a fa-icon{margin-left:.625rem}.bandeau-bleu .titre-contact{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin:0 auto;width:100%}.bandeau-bleu .titre-contact .fr-btn{cursor:pointer}.bandeau-bleu .titre-contact .fr-btn:hover{background-image:none;background-color:#ffffff1a}.display-none{display:none}@media screen and (max-width: 992px){dsfr-header a.fr-btn.fr-icon-notification-3-fill:after{top:8px;left:.4rem}.bandeau-bleu{padding:2.5rem 1.25rem}.bandeau-bleu h4{margin-bottom:1.375rem;margin-right:0;text-align:center}.bandeau-bleu .titre-contact{flex-direction:column}.bandeau-bleu .titre-contact .fr-btn{margin-top:1.25rem}}
+</style><style>.fr-modal{z-index:0}.fr-modal--opened{z-index:99999}.uppercase{text-transform:uppercase}
+</style><style>.cursor-hand{cursor:pointer}
+</style><style>.block-ui-wrapper{display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:rgba(0,0,0,.7);z-index:30000;cursor:wait}.block-ui-wrapper.block-ui-wrapper--element{position:absolute}.block-ui-wrapper.active{display:block}.block-ui-wrapper.block-ui-main{position:fixed}.block-ui-spinner,.block-ui-template{position:absolute;top:40%;margin:0 auto;left:0;right:0;transform:translateY(-50%)}.block-ui-spinner>.message{font-size:1.3em;text-align:center;color:#fff}.block-ui__element{position:relative}.loader,.loader:after{border-radius:50%;width:10em;height:10em}.loader{margin:7px auto;font-size:5px;position:relative;text-indent:-9999em;border-top:1.1em solid rgba(255,255,255,.2);border-right:1.1em solid rgba(255,255,255,.2);border-bottom:1.1em solid rgba(255,255,255,.2);border-left:1.1em solid #ffffff;transform:translateZ(0);animation:load8 1.1s infinite linear}@keyframes load8{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+</style><title>Service en ligne Orientation - Frise OATI - Mes services - ministère de l'Éducation nationale et de la Jeunesse</title><style>.fr-nav__list>*>*>.fr-nav__link{padding:1rem;margin:0;width:auto;height:100%;min-height:3.5rem;font-weight:400}.fr-nav__list>*>*>.fr-nav__link[aria-current]:before{position:absolute;top:auto;bottom:0;left:0;width:100%;height:2px;margin-top:0}.fr-collapse:before{content:""}
+</style><style>#bouton-ouverture[_ngcontent-ng-c3112352631]{display:none}.block-ui-spinner[_ngcontent-ng-c3112352631]{cursor:wait;position:absolute;top:40%;margin:0 auto;left:0;right:0;transform:translateY(-50%)}.block-ui-spinner[_ngcontent-ng-c3112352631]   .loader[_ngcontent-ng-c3112352631]{margin:.438rem auto;font-size:.313rem;position:relative;text-indent:-9999em;border-top:1.1em solid rgba(255,255,255,.2);border-right:1.1em solid rgba(255,255,255,.2);border-bottom:1.1em solid rgba(255,255,255,.2);border-left:1.1em solid #ffffff;transform:translateZ(0);animation:load8 1.1s infinite linear;opacity:.7}.block-ui-spinner[_ngcontent-ng-c3112352631]   .loader[_ngcontent-ng-c3112352631], .block-ui-spinner[_ngcontent-ng-c3112352631]   .loader[_ngcontent-ng-c3112352631]:after{border-radius:50%;width:10em;height:10em}.block-ui-spinner[_ngcontent-ng-c3112352631]   .message[_ngcontent-ng-c3112352631]{font-size:1.3em;text-align:center;color:#fff}dsfr-modal[_ngcontent-ng-c3112352631]{cursor:auto}dsfr-modal[_ngcontent-ng-c3112352631]   *[class^=content]+dsfr-accordion[_ngcontent-ng-c3112352631]{display:block;margin-top:1rem}dsfr-modal[_ngcontent-ng-c3112352631]   dsfr-accordion[_ngcontent-ng-c3112352631]   pre[_ngcontent-ng-c3112352631]{font-size:.8rem;overflow-x:scroll}</style><style>.sr-only{position:absolute!important;border:0!important;height:1px!important;width:1px!important;padding:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important}.fr-btn--icon{padding:.5rem;min-width:2.5rem;display:flex;justify-content:center}.fr-btn--icon:before{margin:0}.uppercase{text-transform:uppercase}button.inverted-outline-contrast:focus-visible{outline-color:var(--grey-950-100)}
+</style><style>h2[_ngcontent-ng-c350961108]{margin-block-start:1em;margin-block-end:1em}.bloc[_ngcontent-ng-c350961108]   dsfr-accordion[_ngcontent-ng-c350961108]{display:block;margin-top:2rem}.bloc[_ngcontent-ng-c350961108]     .fr-accordion__btn{font-size:2rem;font-weight:700}h3[_ngcontent-ng-c350961108]{font-size:2rem}p[_ngcontent-ng-c350961108]{display:block;margin-block-start:1em;margin-block-end:1em;margin-inline-start:0px;margin-inline-end:0px}b.scol[_ngcontent-ng-c350961108]{color:var(--theme-color);letter-spacing:.25pt}ul[_ngcontent-ng-c350961108]{list-style-type:disc;padding-inline-start:40px}.services[_ngcontent-ng-c350961108]{font-weight:700;font-size:larger}.services.haut[_ngcontent-ng-c350961108]{padding-bottom:.938rem}.services.bas[_ngcontent-ng-c350961108]{padding-top:.938rem}.services[_ngcontent-ng-c350961108]   a[_ngcontent-ng-c350961108]{color:var(--theme-color)}.remarque.centered[_ngcontent-ng-c350961108]{text-align:center}.remarque.bordered[_ngcontent-ng-c350961108]{border:solid;border-width:1px;padding:.1rem}.services-eleve[_ngcontent-ng-c350961108]   a[_ngcontent-ng-c350961108]{color:var(--theme-color)}</style><style>.message-container[_ngcontent-ng-c1414734141]:not(:last-child){margin-bottom:1rem}</style><style>:root{--theme-color: var(--blue-ecume-main-400);--theme-bg-color: var(--blue-ecume-main-400);--border-color: #e6e6e6;--fc-small-font-size: .85em;--fc-page-bg-color: #fff;--fc-neutral-bg-color: rgba(208, 208, 208, .3);--fc-neutral-text-color: #808080;--fc-border-color: #ddd;--fc-button-text-color: #ffffff;--fc-button-bg-color: #000091;--fc-button-border-color: #000091;--fc-button-hover-bg-color: rgba(0, 0, 246, .5);--fc-button-hover-border-color: rgba(0, 0, 246, .5);--fc-button-active-bg-color: rgba(0, 0, 246, .5);--fc-button-active-border-color: rgba(0, 0, 246, .5);--fc-event-bg-color: #3788d8;--fc-event-border-color: #3788d8;--fc-event-text-color: #fff;--fc-event-selected-overlay-color: rgba(0, 0, 0, .25);--fc-event-resizer-thickness: 8px;--fc-event-resizer-dot-total-width: 8px;--fc-event-resizer-dot-border-width: 1px;--fc-non-business-color: rgba(215, 215, 215, .3);--fc-bg-event-color: rgb(143, 223, 130);--fc-bg-event-opacity: .3;--fc-highlight-color: rgba(188, 232, 241, .3);--fc-today-bg-color: rgba(255, 220, 40, .15);--fc-now-indicator-color: red}:root[data-fr-theme=dark]{--theme-bg-color: #383838;--theme-color: var(--blue-ecume-main-400);--border-color: #6a6a6a}li.is-disabled{display:flex;align-items:baseline;justify-content:space-between}li.is-disabled a{cursor:not-allowed;color:var(--text-disabled-grey);pointer-events:none}li.is-disabled a:hover{background-image:none}li.is-disabled .info{cursor:pointer;color:var(--text-disabled-grey)}.head-current-eleve{display:flex}.head-current-eleve .head-right dsfr-form-select .fr-select-group .fr-label{color:#fff}.head-current-eleve .container-img-profil.small.error{border:2px solid var(--border-action-high-error)}.feedback-alert{width:100%;margin-bottom:10px}@media screen and (max-width: 992px){.lien-ent a{font-size:.75rem}}@media screen and (max-width: 1200px){.head-current-eleve{width:100%;justify-content:space-between}}
+</style><style>.title-container[_ngcontent-ng-c2935746457]{display:flex;align-content:space-between;justify-content:space-between;margin-bottom:1rem}.button-container[_ngcontent-ng-c2935746457]{margin-top:20px;text-align:center}</style><style>.timeline--bloc{margin-left:1rem;padding-left:2rem;padding-bottom:1rem;border-left:6px solid var(--background-active-blue-france);box-sizing:border-box;position:relative}.timeline--bloc:before{content:"";position:absolute;left:0;top:2rem;transform:translate(calc(-.75rem - 1px));width:1.25rem;height:1.25rem;border-radius:.75rem;background-color:var(--background-active-blue-france)}@media screen and (max-width: 768px){.timeline--bloc{margin-left:.05rem;padding-left:1rem}}
+</style>
+
+</head>
+
+  <body>
+    <eds-platform ng-version="16.2.4"><block-ui>
+  
+    
+      <dsfr-header operatorimagealt="logo Scolarité Services" operatorimagepath="assets/images/scolariteservices-logo.svg"><header role="banner" class="fr-header"><div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row"><div class="fr-header__brand fr-enlarge-link"><div class="fr-header__brand-top"><div class="fr-header__logo"><!----><p class="fr-logo">Ministère<br>de l'Éducation<br>nationale<br>et de la Jeunesse</p><!----></div><div class="fr-header__operator"><a href=""><img class="fr-responsive-img" src="assets/images/scolariteservices-logo.svg" alt="logo Scolarité Services" style="max-width: 9.0625rem;" data-fr-js-ratio="true"></a><!----><!----></div><!----><div class="fr-header__navbar"><!----><button type="button" data-fr-opened="false" aria-controls="modal-577" aria-haspopup="menu" id="button-578" class="fr-btn--menu fr-btn" title="Menu" data-fr-js-modal-button="true"> Menu </button></div></div><!----></div><div class="fr-header__tools"><div class="fr-header__tools-links" data-fr-js-header-links="true"><ul class="fr-btns-group"><li><edu-item-link data-item="Lucas JORNET-JAQUET"><a aria-disabled="false" href="#" class="fr-btn fr-icon-account-line fr-btn--icon-left">Lucas JORNET-JAQUET</a><!----><!----><!----><!----><!----><!----></edu-item-link><!----></li><li><edu-item-link data-item="Se déconnecter"><a aria-controls="logoutModal" aria-disabled="false" href="#" data-fr-opened="false" class="fr-btn fr-icon-logout-box-r-line fr-btn--icon-left" data-fr-js-modal-button="true">Se déconnecter</a><!----><!----><!----><!----><!----><!----></edu-item-link><!----></li><!----></ul><!----><!----><!----></div><!----><!----></div><!----></div></div></div><div id="modal-577" aria-labelledby="button-578" class="fr-header__menu fr-modal" data-fr-js-modal="true" data-fr-js-header-modal="true"><div class="fr-container"><button type="button" aria-controls="modal-577" title="Fermer" class="fr-btn--close fr-btn" data-fr-js-modal-button="true">Fermer</button><div class="fr-header__menu-links"><!----><!----><!----><ul class="fr-btns-group"><li><edu-item-link data-item="Lucas JORNET-JAQUET"><a aria-disabled="false" href="#" class="fr-btn fr-icon-account-line fr-btn--icon-left">Lucas JORNET-JAQUET</a><!----><!----><!----><!----><!----><!----></edu-item-link><!----></li><li><edu-item-link data-item="Se déconnecter"><a aria-controls="logoutModal" aria-disabled="false" href="#" data-fr-opened="false" class="fr-btn fr-icon-logout-box-r-line fr-btn--icon-left" data-fr-js-modal-button="true">Se déconnecter</a><!----><!----><!----><!----><!----><!----></edu-item-link><!----></li><!----></ul></div><nav id="navigation-581" role="navigation" aria-label="Menu principal" class="fr-nav" data-fr-js-navigation="true"><ul class="fr-nav__list"><li class="fr-nav__item" data-fr-js-navigation-item="true"><edu-item-link customclass="fr-nav__link"><!----><a aria-disabled="false" aria-label="Accueil : accéder à la page d'accueil" class="fr-nav__link" href="/eds/accueil">Accueil</a><!----><!----><!----><!----><!----></edu-item-link></li><!----><!----><!----><!----><li class="fr-nav__item" data-fr-js-navigation-item="true"><edu-item-link customclass="fr-nav__link"><!----><a aria-disabled="false" aria-label="Mes services : accéder à mes services en ligne" class="fr-nav__link active-link" href="/eds/mes-services" aria-current="page">Mes services</a><!----><!----><!----><!----><!----></edu-item-link></li><!----><!----><!----><!----><!----></ul></nav></div></div><!----></header><!----></dsfr-header>
+
+      <main role="main" aria-hidden="false">
+        <section id="container" class="slim">
+          <router-outlet></router-outlet><eds-mes-services><!---->
+<h2 class="mobile">Mes services</h2>
+<div class="container-enfant">
+  <div class="head">
+    <h2>Mes services</h2>
+    <div class="head-current-eleve">
+      <div class="head-right">
+        <div tabindex="0" aria-current="true" class="head-right-info">
+          <span class="sr-only">élève sélectionné Lucas JORNET-JAQUET</span>
+          <p aria-hidden="true" class="name fr-text--lg" title="Lucas JORNET-JAQUET">
+            Lucas
+            J.
+          </p>
+        </div><!---->
+        
+        <div class="container-img-profil" title="Lucas JORNET-JAQUET">
+          <!---->
+          
+          <div data-cy="photo" class="no-img-profil">
+            <span aria-hidden="true" class="fr-fi-user-line fr-fi--xl"></span>
+          </div><!---->
+          
+          <!---->
+        </div><!---->
+        <!---->
+      </div>
+    </div><!---->
+  </div>
+
+  <div class="container-vs">
+    <nav role="navigation" aria-label="Menu latéral" class="fr-sidemenu">
+      <div class="fr-sidemenu__inner">
+        <button id="btnMenuMobile" aria-controls="fr-sidemenu-wrapper-mes-services" aria-expanded="false" class="fr-sidemenu__btn" data-fr-js-collapse-button="true">
+          Liste des services
+        </button>
+        <div id="fr-sidemenu-wrapper-mes-services" class="fr-collapse fr-collapsing" data-fr-js-collapse="true" style="--collapse-max-height: none; --collapse: -121px;">
+          <ul class="fr-sidemenu__list" data-fr-js-sidemenu-list="true">
+            <li class="fr-sidemenu__item" data-fr-js-sidemenu-item="true">
+              <a href="/eds/mes-services/AC2D/16/3295745/orientation" target="_self" routerlinkactive="active-ts" class="fr-sidemenu__link active-ts" tabindex="0"><span>
+                  <svg-icon class="svg-icon">
+    <svg aria-hidden="true" role="img">
+      <use xlink:href="assets/icons/icons-mes-services.svg#ORI"></use>
+    </svg>
+  </svg-icon></span>Orientation</a>
+              <!---->
+            </li><li class="fr-sidemenu__item" data-fr-js-sidemenu-item="true">
+              <a href="/eds/mes-services/AC2D/16/3295745/livret-scolaire" target="_self" routerlinkactive="active-ts" class="fr-sidemenu__link" tabindex="0"><span>
+                  <svg-icon class="svg-icon">
+    <svg aria-hidden="true" role="img">
+      <use xlink:href="assets/icons/icons-mes-services.svg#LSUN"></use>
+    </svg>
+  </svg-icon></span>Livret scolaire du CP à la 3e</a>
+              <!---->
+            </li><!---->
+          </ul>
+          <!---->
+        </div>
+      </div>
+    </nav><!---->
+    <div class="container-TS">
+      <router-outlet>
+        <!---->
+      </router-outlet><eds-ts-ori-oati _nghost-ng-c2282193843=""><eds-common-oati _ngcontent-ng-c2282193843="" _nghost-ng-c2935746457="">
+  <div _ngcontent-ng-c2935746457="" class="title-container">
+    <h3 _ngcontent-ng-c2935746457="">Bien préparer la rentrée 2024</h3>
+  </div>
+
+  <dsfr-ext-timeline _ngcontent-ng-c2935746457=""><div class="timeline-container"><div class="timeline--bloc"><dsfr-card><div class="fr-card fr-card--no-arrow"><div class="fr-card__body"><div class="fr-card__content"><!----><!----><h4 class="fr-card__title"><span>De janvier à avril</span><!----><!----><!----><!----></h4><!----><!----><!----><!----><!----><!----><div class="fr-card__start"><dsfr-tags-group><ul class="fr-tags-group"><!----></ul></dsfr-tags-group><!----><dsfr-badges-group><ul class="fr-badges-group"><!----></ul></dsfr-badges-group><!----><!----></div><!----><p class="fr-card__desc">Avant le conseil de classe, vous indiquez pour votre enfant, l’intention d’orientation vers la voie
+générale et technologique ou la voie professionnelle. Après le conseil de classe, vous prenez
+connaissance de l’avis provisoire concernant l’orientation demandée et vous en accusez réception.</p><!----><div class="fr-card__end"><p class="fr-card__detail">  </p></div><!----></div><div class="fr-card__footer"><dsfr-buttons-group footer="" inline="always"><ul class="fr-btns-group fr-btns-group--inline"><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Formuler les intentions d'orientation<!----><!----><!----></button></dsfr-button></li><!----><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Prendre connaissance de l'avis<!----><!----><!----></button></dsfr-button></li><!----><!----></ul></dsfr-buttons-group></div><!----></div><!----></div><!----><!----></dsfr-card></div><!----><div class="timeline--bloc"><dsfr-card><div class="fr-card fr-card--no-arrow"><div class="fr-card__body"><div class="fr-card__content"><!----><!----><h4 class="fr-card__title"><span>Du 5 avril au 27 mai</span><!----><!----><!----><!----></h4><!----><!----><!----><!----><!----><!----><div class="fr-card__start"><dsfr-tags-group><ul class="fr-tags-group"><!----></ul></dsfr-tags-group><!----><dsfr-badges-group><ul class="fr-badges-group"><!----></ul></dsfr-badges-group><!----><!----></div><!----><p class="fr-card__desc">Vous pouvez consulter l’offre des formations. <br> <br> <span class="is-bold">À partir du 6 mai</span>, vous précisez la ou les formations ainsi que l'(les) établissement(s) souhaité(s) pour votre enfant.</p><!----><div class="fr-card__end"><p class="fr-card__detail">  </p></div><!----></div><div class="fr-card__footer"><dsfr-buttons-group footer="" inline="always"><ul class="fr-btns-group fr-btns-group--inline"><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Préciser formations et établissements<!----><!----><!----></button></dsfr-button></li><!----><!----></ul></dsfr-buttons-group></div><!----></div><!----></div><!----><!----></dsfr-card></div><!----><div class="timeline--bloc"><dsfr-card><div class="fr-card fr-card--no-arrow"><div class="fr-card__body"><div class="fr-card__content"><!----><!----><h4 class="fr-card__title"><span>D’avril à début juin</span><!----><!----><!----><!----></h4><!----><!----><!----><!----><!----><!----><div class="fr-card__start"><dsfr-tags-group><ul class="fr-tags-group"><!----></ul></dsfr-tags-group><!----><dsfr-badges-group><ul class="fr-badges-group"><!----></ul></dsfr-badges-group><!----><!----></div><!----><p class="fr-card__desc">Avant le conseil de classe, vous indiquez les choix définitifs d’orientation. Après le conseil de classe vous consultez la proposition d’orientation et vous donnez votre réponse.</p><!----><div class="fr-card__end"><p class="fr-card__detail">  </p></div><!----></div><div class="fr-card__footer"><dsfr-buttons-group footer="" inline="always"><ul class="fr-btns-group fr-btns-group--inline"><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Formuler les choix définitifs<!----><!----><!----></button></dsfr-button></li><!----><li><dsfr-button variant="secondary"><button class="fr-btn fr-btn--secondary">Répondre au conseil de classe<!----><!----><!----></button></dsfr-button></li><!----><!----></ul></dsfr-buttons-group></div><!----></div><!----></div><!----><!----></dsfr-card></div><!----><div class="timeline--bloc"><dsfr-card><div class="fr-card fr-card--no-arrow"><div class="fr-card__body"><div class="fr-card__content"><!----><!----><h4 class="fr-card__title"><span>À partir du 26 juin</span><!----><!----><!----><!----></h4><!----><!----><!----><!----><!----><!----><div class="fr-card__start"><dsfr-tags-group><ul class="fr-tags-group"><!----></ul></dsfr-tags-group><!----><dsfr-badges-group><ul class="fr-badges-group"><li><dsfr-badge><p class="fr-badge fr-badge--info"> Prochainement
+</p></dsfr-badge></li><!----></ul></dsfr-badges-group><!----><!----></div><!----><p class="fr-card__desc">Vous découvrez la formation et l’établissement retenus pour votre enfant et vous l’inscrivez dans son établissement.</p><!----><div class="fr-card__end"><p class="fr-card__detail">  </p></div><!----></div><div class="fr-card__footer"><dsfr-buttons-group footer="" inline="always"><ul class="fr-btns-group fr-btns-group--inline"><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Voir le résultat d’affectation<!----><!----><!----></button></dsfr-button></li><!----><li><dsfr-button variant="secondary"><button disabled="" class="fr-btn fr-btn--secondary">Inscrire<!----><!----><!----></button></dsfr-button></li><!----><!----></ul></dsfr-buttons-group></div><!----></div><!----></div><!----><!----></dsfr-card></div><!----><!----></div></dsfr-ext-timeline>
+
+  <div _ngcontent-ng-c2935746457="" class="button-container">
+    <dsfr-button _ngcontent-ng-c2935746457=""><button class="fr-btn">Accéder au service Orientation<!----><!----><!----></button></dsfr-button>
+  </div>
+<!----><!---->
+</eds-common-oati><!---->
+</eds-ts-ori-oati><!---->
+    </div>
+  </div>
+</div>
+</eds-mes-services><!---->
+        </section>
+      </main>
+
+      <div class="bandeau-bleu">
+        <div class="titre-contact">
+          <p>Une question, besoin d'aide ?</p>
+          <a aria-label="Accéder au formulaire d'assistance dans un nouvel onglet" rel="noreferrer" target="_blank" class="fr-btn fr-btn--lg fr-btn--secondary" href="https://assistanceteleservices.education.gouv.fr/">
+            Assistance
+            <fa-icon class="ng-fa-icon"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelopes-bulk" class="svg-inline--fa fa-envelopes-bulk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"></path></svg></fa-icon>
+          </a>
+        </div>
+      </div>
+
+      <dsfr-footer><footer role="contentinfo" id="footer" class="fr-footer"><!----><div class="fr-container"><div class="fr-footer__body"><div class="fr-footer__brand fr-enlarge-link"><!----><a href="" title="Retour à l’accueil"><p class="fr-logo">Ministère<br>de l'Éducation<br>nationale<br>et de la Jeunesse</p></a><!----><!----></div><div class="fr-footer__content"><p class="fr-footer__content-desc">Ce service est réalisé par le ministère de l'Éducation nationale et de la Jeunesse.</p><!----><ul class="fr-footer__content-list"><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.education.gouv.fr/" target="_blank"> Education.gouv.fr</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://franceconnect.gouv.fr/" target="_blank"> Franceconnect.gouv.fr</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.gouvernement.fr/" target="_blank"> Gouvernement.fr</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://www.service-public.fr/" target="_blank"> Service-public.fr</a></li><li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://eduscol.education.fr/" target="_blank"> Eduscol.education.fr</a></li><!----></ul></div></div><!----><div class="fr-footer__bottom"><ul class="fr-footer__bottom-list"><li class="fr-footer__bottom-item"><edu-item-link customclass="fr-footer__bottom-link"><a aria-disabled="false" href="https://conformite.education.fr/?appli=scolarite-services" target="_blank" class="fr-footer__bottom-link">Accessibilité : partiellement conforme</a><!----><!----><!----><!----><!----><!----></edu-item-link></li><li class="fr-footer__bottom-item"><edu-item-link customclass="fr-footer__bottom-link"><a aria-disabled="false" href="static/mentions-legales.html" target="_blank" class="fr-footer__bottom-link">Mentions légales</a><!----><!----><!----><!----><!----><!----></edu-item-link></li><li class="fr-footer__bottom-item"><edu-item-link customclass="fr-footer__bottom-link"><a aria-disabled="false" href="static/mentions-informatives.html" target="_blank" class="fr-footer__bottom-link">Mentions informatives</a><!----><!----><!----><!----><!----><!----></edu-item-link></li><!----><!----></ul><div class="fr-footer__bottom-copy"><p>© Ministère de l'Éducation nationale et de la Jeunesse | version 24.2.0.1.0</p></div></div></div></footer><!----></dsfr-footer>
+    <!---->
+
+    <!---->
+  <!----><!---->
+<block-ui-content><div class="block-ui-wrapper block-ui-main"><!----><eds-alert-dialog _nghost-ng-c3112352631=""><dsfr-modal _ngcontent-ng-c3112352631="" controlmode="dynamic"><button type="button" data-fr-opened="false" disabled="" hidden="" style="display: none;" aria-controls="3f0e0c5b-e52c-49ab-a9e8-4499ec469b06" data-fr-js-modal-button="true"></button><!----><dialog class="fr-modal" id="3f0e0c5b-e52c-49ab-a9e8-4499ec469b06" aria-labelledby="d5e29a38-f01a-41dc-b0de-6928f9b91826" data-fr-js-modal="true"><div class="fr-container fr-container--fluid fr-container-md"><div class="fr-grid-row fr-grid-row--center"><div class="fr-col-12 fr-col-lg-6"><div class="fr-modal__body" data-fr-js-modal-body="true"><div class="fr-modal__header"><button type="button" class="fr-btn fr-btn--close" aria-label="Fermer la fenêtre" aria-controls="3f0e0c5b-e52c-49ab-a9e8-4499ec469b06" data-fr-js-modal-button="true"> Fermer </button></div><div class="fr-modal__content"><h1 class="fr-modal__title" id="d5e29a38-f01a-41dc-b0de-6928f9b91826"><span class="fr-icon-arrow-right-line fr-fi--lg"></span> </h1><!----><!----><!----><!----><!----><!----><!---->
+  
+    
+      
+        <label _ngcontent-ng-c3112352631="" class="content-label"></label>
+      <!---->
+    <!---->
+    <!---->
+    <!---->
+  <!----><!---->
+</div><!----></div></div></div></div></dialog><!----></dsfr-modal>
+
+<div _ngcontent-ng-c3112352631="" class="alerte-dialog-wrapper" hidden="">
+  <div _ngcontent-ng-c3112352631="" class="block-ui-spinner">
+    <div _ngcontent-ng-c3112352631="" class="loader"></div>
+    <div _ngcontent-ng-c3112352631="" class="message">Veuillez patienter...</div>
+  </div>
+</div>
+</eds-alert-dialog><!----><!----></div></block-ui-content></block-ui>
+
+<dsfr-modal dialogid="modal-notifications" titlemodal="Notifications"><!----><dialog class="fr-modal" id="modal-notifications" aria-labelledby="2060b764-76ab-4c35-8c9a-cdbae7b00cf1" data-fr-js-modal="true"><div class="fr-container fr-container--fluid fr-container-md"><div class="fr-grid-row fr-grid-row--center"><div class="fr-col-12 fr-col-lg-6"><div class="fr-modal__body" data-fr-js-modal-body="true"><div class="fr-modal__header"><button type="button" class="fr-btn fr-btn--close" aria-label="Fermer la fenêtre" aria-controls="modal-notifications" data-fr-js-modal-button="true"> Fermer </button></div><div class="fr-modal__content"><h1 class="fr-modal__title" id="2060b764-76ab-4c35-8c9a-cdbae7b00cf1"><span class="fr-icon-arrow-right-line fr-fi--lg"></span>Notifications </h1><!----><!----><!----><!----><!----><!----><!---->
+  <eds-notification><!---->
+</eds-notification>
+</div><!----></div></div></div></div></dialog><!----></dsfr-modal>
+
+<dsfr-modal dialogid="logoutModal" titlemodal="Confirmation"><!----><dialog class="fr-modal" id="logoutModal" aria-labelledby="40155ddf-2a4a-45a6-b415-ea599ae65b50" data-fr-js-modal="true"><div class="fr-container fr-container--fluid fr-container-md"><div class="fr-grid-row fr-grid-row--center"><div class="fr-col-12 fr-col-lg-6"><div class="fr-modal__body" data-fr-js-modal-body="true"><div class="fr-modal__header"><button type="button" class="fr-btn fr-btn--close" aria-label="Fermer la fenêtre" aria-controls="logoutModal" data-fr-js-modal-button="true"> Fermer </button></div><div class="fr-modal__content"><h1 class="fr-modal__title" id="40155ddf-2a4a-45a6-b415-ea599ae65b50"><span class="fr-icon-arrow-right-line fr-fi--lg"></span>Confirmation </h1><!----><!----><!----><!----><!----><!----><!---->
+  <p>Se déconnecter de Scolarité Services.</p>
+</div><div class="fr-modal__footer"><ul class="fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-lg fr-btns-group--icon-left"><li><dsfr-button><button aria-label="VALIDER : Confirme la déconnexion" aria-controls="logoutModal" data-fr-opened="false" class="fr-btn" data-fr-js-modal-button="true">Valider<!----><!----><!----></button></dsfr-button></li><li><dsfr-button><button aria-label="ANNULER : Annule la déconnexion" aria-controls="logoutModal" data-fr-opened="false" class="fr-btn fr-btn--secondary" data-fr-js-modal-button="true">Annuler<!----><!----><!----></button></dsfr-button></li><!----></ul></div><!----></div></div></div></div></dialog><!----></dsfr-modal>
+</eds-platform><!---->
+  <script type="text/javascript" defer="" async="" src="https://wa.phm.education.gouv.fr/teleservices/matomo.js"></script><script src="runtime.6505f3b20c6d9d5e.js" type="module"></script><script src="polyfills.77cbea0e9f261dcd.js" type="module"></script><script src="scripts.e17fc0ea6460fe67.js" defer=""></script><script src="main.cc67e75c6c0d59f6.js" type="module"></script>
+
+</body></html>

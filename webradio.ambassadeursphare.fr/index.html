@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Audio Stylisé avec Métadonnées</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player">
+        <div class="details">
+            <img src="default-album-art.jpg" alt="Pochette de l'album" class="album-art" id="album-art">
+            <div class="track-info">
+                <div class="track-title" id="track-title"><p id="titre">Titre de la chanson</p></div>
+                <div class="track-artist" id="track-artist"><p id="artiste">Nom de l'artiste</p></div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prev" class="control-button">⏮</button>
+            <button id="play-pause" class="control-button">▶️</button>
+            <button id="next" class="control-button">⏭</button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" value="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+        <audio id="audio" src="http://localhost:8000/stream"></audio>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags/dist/jsmediatags.min.js"></script>
+    <script src="scripts.js"></script>
+
+    <script>
+        // Lecture des informations sur le titre en cours de diffusion depuis le fichier
+        fetch('diffusion.txt')
+            .then(response => response.text())
+            .then(data => {
+                // Séparer l'artiste et le titre du titre complet
+                const [artiste, titre] = data.split(' - ');
+                document.getElementById('titre-complet').textContent = `Titre complet : ${data}`;
+                document.getElementById('artiste').textContent = `Artiste : ${artiste}`;
+                document.getElementById('titre').textContent = `Titre : ${titre}`;
+            })
+            .catch(error => {
+                console.error('Une erreur s\'est produite lors de la récupération des informations sur le titre en cours de diffusion :', error);
+            });
+    </script>
+</body>
+</html>

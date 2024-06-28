@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des Académies de France</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Carte des Académies de France</h1>
+    <div class="tooltip" id="tooltip"></div>
+    <svg id="france-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+        <!-- Académies de la France métropolitaine -->
+        <a href="https://www.ac-paris.fr" target="_blank">
+            <path id="paris" d="M400,300 L450,350 L400,400 L350,350 Z" data-name="Académie de Paris"></path>
+        </a>
+        <a href="https://www.ac-versailles.fr" target="_blank">
+            <path id="versailles" d="M450,350 L500,400 L450,450 L400,400 Z" data-name="Académie de Versailles"></path>
+        </a>
+        <!-- Ajouter ici les autres académies avec les coordonnées correctes -->
+        
+        <!-- Académies d'outre-mer -->
+        <a href="https://www.ac-guadeloupe.fr" target="_blank">
+            <path id="guadeloupe" d="M200,800 L250,850 L200,900 L150,850 Z" data-name="Académie de Guadeloupe"></path>
+        </a>
+        <!-- Ajouter ici les autres académies d'outre-mer -->
+    </svg>
+    <script src="scripts.js"></script>
+</body>
+</html>

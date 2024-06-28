@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Augmenté la hauteur de la barre du haut */
+    background-color: #0078D7; /* Couleur bleue pour la barre du haut */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espacement augmenté */
+    color: white;
+    z-index: 1000;
+}
+
+.date-time {
+    font-size: 0.9em; /* Taille de police légèrement réduite */
+}
+
+.dock {
+    position: fixed;
+    bottom: 20px; /* Augmenté la distance par rapport au bas */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 30px; /* Augmenté le rayon de la bordure */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombre légèrement augmentée */
+    transition: bottom 0.3s;
+    z-index: 1000;
+}
+
+.dock-item {
+    margin: 0 20px; /* Augmenté la marge entre les éléments */
+    transition: transform 0.3s;
+}
+
+.dock-item img {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    border-radius: 50%; /* Rendu les icônes de la barre de tâches rondes */
+}
+
+.dock-item:hover {
+    transform: scale(1.1); /* Légèrement augmenté la taille au survol */
+}
+
+.desktop {
+    position: absolute;
+    top: 60px; /* Ajusté la position en fonction de la hauteur de la barre du haut */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 20px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+    color: #333; /* Couleur du texte pour les icônes */
+    text-align: center;
+}
+
+.icon img {
+    width: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px; /* Bordure arrondie pour les icônes */
+}
+
+.window {
+    width: 400px; /* Ajusté la largeur de la fenêtre */
+    min-height: 300px; /* Hauteur minimale pour éviter les fenêtres trop petites */
+    background-color: #f9f9f9; /* Couleur de fond de la fenêtre */
+    border-radius: 10px; /* Bordure arrondie */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre légèrement augmentée */
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    resize: both;
+    overflow: hidden;
+    z-index: 900;
+}
+
+.window-header {
+    height: 50px; /* Hauteur de l'en-tête de fenêtre augmentée */
+    background-color: #0078D7; /* Couleur bleue pour l'en-tête de fenêtre */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Espacement augmenté */
+    border-top-left-radius: 10px; /* Bordure arrondie */
+    border-top-right-radius: 10px; /* Bordure arrondie */
+    cursor: move;
+}
+
+.window-title {
+    font-weight: bold;
+    font-size: 1.2em; /* Taille de police légèrement augmentée */
+}
+
+.maximize-btn, .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 20px; /* Espacement augmenté */
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7); /* Garder la couleur d'arrière-plan avec une opacité */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.date-time {
+    margin-right: 20px; /* Légèrement décalé vers la gauche */
+}
+
+.dock {
+    position: fixed;
+    bottom: 0; /* Garder la barre en bas de la page */
+    left: 0;
+    right: 0; /* Ajuster la largeur */
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 0; /* Retirer la bordure arrondie */
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4); /* Effet de la barre vers le bas */
+    transition: bottom 0.3s;
+    z-index: 1000;
+}
+
+.dock-item {
+    margin: 0 20px;
+    transition: transform 0.3s;
+}
+
+.dock-item img {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.dock-item:hover {
+    transform: scale(1.1);
+}

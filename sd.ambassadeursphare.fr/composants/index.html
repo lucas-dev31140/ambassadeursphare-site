@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Composants - Système de Design - Ambassadeurs pHARe</title>
+        <link href="../../cdn.ambassadeursphare.fr/files/public/website/index/css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" type="image/jpg" href="../../cdn.ambassadeursphare.fr/files/public/website/index/img/logo2.jpg">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Yeseva+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fd3d02e6-d14c-4011-85a8-d896247372f6";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    
+        <script>
+       
+    document.addEventListener('DOMContentLoaded', function () {
+        const questions = document.querySelectorAll('.faq-menu ul li a');
+        const contents = document.querySelectorAll('.faq-content > div');
+        const select = document.querySelector('.faq-select');
+
+        questions.forEach(question => {
+            question.addEventListener('click', function (e) {
+                e.preventDefault();
+                questions.forEach(q => q.classList.remove('active'));
+                contents.forEach(content => content.style.display = 'none');
+                question.classList.add('active');
+                const targetContent = document.querySelector(question.getAttribute('href'));
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+
+        if (questions.length > 0) {
+            questions[0].click();
+        }
+
+        select.addEventListener('change', function () {
+            const selectedValue = select.value;
+            contents.forEach(content => content.style.display = 'none');
+            const targetContent = document.querySelector(selectedValue);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+        });
+    });
+
+
+
+</script>
+
+       
+    
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="container_navbar">
+                    <div class="header_navbar">
+                        <div class="header_navbar_logo">
+                            <a href="index.html"><img src="../../cdn.ambassadeursphare.fr/files/public/website/index/img/logo.jpg" class="logo"></a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+
+
+            
+        </header>
+        <nav></nav>
+        <main>
+                <div class="titre-page">
+                    <h1>Composants</h1>
+
+                </div>
+
+                
+                
+
+
+                <div class="faq-container">
+
+
+                    <select class="faq-select">
+                        <option value="#accordeon">Accordéon - Accordion</option>
+                        <option value="#ajout-fichier">Ajout de fichier - Upload</option>
+                        <option value="#alerte">Alerte - Alert</option>
+                        
+                    </select>
+    
+                    <div class="faq-menu">
+                        <ul>
+                            <li><a href="#accordeon" class="active"><b>Accordéon - Accordion</b></a></li>
+                            <li><a href="#ajout-fichier"><b>Ajout de fichier - Upload</b></a></li>
+                            <li><a href="#alerte"><b>Alerte - Alert</b></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="faq-content">
+                        <div id="accordeon">
+                            <h2 class="yeseva">Accordéon - Accordion</h2>
+                            <p>Les accordéons permettent aux utilisateurs d'afficher et de masquer des sections de contenu présentés dans une page.</p>
+                            <p><b>Version du composant : 1</b></p>
+                            <h3>Structure</h3>
+                            <p>Un accordéon est constitué des éléments suivants :
+<ul>
+                                <li>un en-tête, correspondant au titre de la section - obligatoire.</li>
+                                <li>un chevron orienté vers le bas indique que le panneau peut s'ouvrir. Il est orienté vers le haut quand le panneau peut se refermer - obligatoire.</li>
+                                <li>un séparateur - obligatoire</li>
+                                <li>une zone de contenu, masqué par défaut pouvant contenir tout type d'élément - obligatoire.</li></ul></p>
+                            <p>Le groupement d'élèves Ambassadeurs pHARe est un groupe composés d'élèves de collèges et lycées français.<br><br>
+                                Basées dans plusieurs délégations locales et délégations académiques, nous sommes présents et souhaitons étendre le plus possible notre action.</p>
+                                
+
+                                <div class="visionnage-composant">
+
+                                <div class="accordion">
+                                    <div class="accordion-header">
+                                        <div class="accordion-titre">
+                                            <h3>Nom de l'accordéon</h3>
+                                        </div>
+                                        <div class="accordion-chevron">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="accordion-content">
+                                        <h3>Nom de l'accordéon</h3>
+                                        <p>Contenu de l'accordéon.</p>
+                                    </div>
+                                </div>
+
+                                </div>
+                                
+                                
+                                
+                                <pre><code class="html-code">
+&lt;div class="accordion"&gt;
+    &lt;div class="accordion-header"&gt;
+        &lt;div class="accordion-titre"&gt;
+            &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-chevron"&gt;
+            &lt;i class="fa-solid fa-chevron-down&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;p&gt;Contenu de l'accordéon.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                        </code></pre>
+
+
+
+
+
+                                        <h3>Groupes d'accordéons</h3>
+
+                                        <div class="visionnage-composant">
+
+                                        <div class="accordion">
+                                            <div class="accordion-header">
+                                                <div class="accordion-titre">
+                                                    <h3>Nom de l'accordéon</h3>
+                                                </div>
+                                                <div class="accordion-chevron">
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="accordion-content">
+                                                <h3>Nom de l'accordéon</h3>
+                                                <p>Contenu de l'accordéon.</p>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="accordion-header">
+                                                <div class="accordion-titre">
+                                                    <h3>Nom de l'accordéon</h3>
+                                                </div>
+                                                <div class="accordion-chevron">
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="accordion-content">
+                                                <h3>Nom de l'accordéon</h3>
+                                                <p>Contenu de l'accordéon.</p>
+                                            </div>
+                                        </div>
+
+                                        </div>
+
+
+                                        <pre><code class="html-code">
+&lt;div class="accordion"&gt;
+    &lt;div class="accordion-header"&gt;
+        &lt;div class="accordion-titre"&gt;
+            &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-chevron"&gt;
+            &lt;i class="fa-solid fa-chevron-down&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;p&gt;Contenu de l'accordéon.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="accordion"&gt;
+    &lt;div class="accordion-header"&gt;
+        &lt;div class="accordion-titre"&gt;
+            &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-chevron"&gt;
+            &lt;i class="fa-solid fa-chevron-down&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;h3&gt;Nom de l'accordéon&lt;/h3&gt;
+        &lt;p&gt;Contenu de l'accordéon.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                                </code></pre>
+
+                                                <p>Par défaut, les accordéons sont fermés et comprennent l’en tête et le chevron.</p>
+                                                <p>La totalité de la barre de titre est cliquable. En cliquant sur le titre ou l’icône , 
+                                                    le contenu est révélé ou caché et le chevron change d'orientation.</p>
+
+                        </div>
+
+
+
+                        <div id="ajout-fichier" style="display: none;">
+                            <h2 class="yeseva">Ajout de fichier - Upload</h2>
+                            <p>Ce composant permet aux utilisateurs de sélectionner et envoyer un ou plusieurs fichiers.</p>
+                            <p><b>Version du composant : 1</b></p>
+                            <h3>Structure</h3>
+                            <p>Le composant “ajout de fichier” est composé de :
+<ul>
+                                <li>Un label - le texte du label exprime clairement l’action attendu pour l’utilisateur, par défaut : “Ajouter un fichier” - obligatoire</li>
+                                <li>Un texte explicatif qui précise les contraintes au niveau du ou des fichiers attendus : format, poids attendus, nombre de fichiers possible… - obligatoire</li>
+                                <li>Le bouton “parcourir” et le texte des fichiers qui sont gérés en natif directement par le navigateur - obligatoire</li></ul></p>
+                            <p>Au clic sur parcourir, la boite de dialogue de sélection de fichier s’affiche. Les noms des fichiers sélectionnés viennent s’afficher à la place du texte par défaut.</p>
+                               
+                            <div class="visionnage-composant">
+
+                            <div class="upload-group">
+                                <label class="upload-label" for="file-upload">
+                                    Ajouter des fichiers
+                                    <span class="hint-text">Taille maximale : 500 Mo. Formats supportés : jpg, png, pdf. Plusieurs fichiers possibles. Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+                                </label>
+                                <input class="upload" type="file" id="file-upload" name="file-upload" multiple>
+                                
+                            </div>
+
+                            </div>
+
+
+                            <pre><code>
+&lt;div class="upload-group"&gt;
+    &lt;label class="upload-label" for="file-upload"&gt;
+        Ajouter des fichiers
+        &lt;span class="hint-text"&gt;Taille maximale : 500 Mo. Formats supportés : jpg, png, pdf.
+        Plusieurs fichiers possibles. Lorem ipsum dolor sit amet, consectetur adipiscing.&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input class="upload" type="file" id="file-upload" name="file-upload" multiple&gt;
+&lt;/div&gt;
+                            </code></pre>
+                            
+                        </div>
+
+
+
+                        <div id="alerte" style="display: none;">
+                            <h2 class="yeseva">Alerte - Alert</h2>
+                            <p>Les alertes permettent d’attirer l’attention de l’utilisateur sur une information sans interrompre sa tâche en cours.</p>
+                            <p><b>Version du composant : 1</b></p>
+                            <h3>Structure</h3>
+                            <p>Le composant “ajout de fichier” est composé de :
+<ul>
+                                <li>Un label - le texte du label exprime clairement l’action attendu pour l’utilisateur, par défaut : “Ajouter un fichier” - obligatoire</li>
+                                <li>Un texte explicatif qui précise les contraintes au niveau du ou des fichiers attendus : format, poids attendus, nombre de fichiers possible… - obligatoire</li>
+                                <li>Le bouton “parcourir” et le texte des fichiers qui sont gérés en natif directement par le navigateur - obligatoire</li></ul></p>
+                            <p>Au clic sur parcourir, la boite de dialogue de sélection de fichier s’affiche. Les noms des fichiers sélectionnés viennent s’afficher à la place du texte par défaut.</p>
+                               
+                            <div class="visionnage-composant">
+
+                            <div class="upload-group">
+                                <label class="upload-label" for="file-upload">
+                                    Ajouter des fichiers
+                                    <span class="hint-text">Taille maximale : 500 Mo. Formats supportés : jpg, png, pdf. Plusieurs fichiers possibles. Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+                                </label>
+                                <input class="upload" type="file" id="file-upload" name="file-upload" multiple>
+                                
+                            </div>
+
+                            </div>
+
+
+                            <pre><code>
+&lt;div class="upload-group"&gt;
+    &lt;label class="upload-label" for="file-upload"&gt;
+        Ajouter des fichiers
+        &lt;span class="hint-text"&gt;Taille maximale : 500 Mo. Formats supportés : jpg, png, pdf.
+        Plusieurs fichiers possibles. Lorem ipsum dolor sit amet, consectetur adipiscing.&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input class="upload" type="file" id="file-upload" name="file-upload" multiple&gt;
+&lt;/div&gt;
+                            </code></pre>
+                            
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        
+                        
+                    </div>
+                </div>
+                
+            
+                
+
+                    <div class="vide40"></div>
+                </main>
+
+
+                
+
+
+
+<footer class="footer-content">
+    <div class="footer-container">
+        
+        <div class="footer-row">
+            <div class="footer-social">
+                <!--<a href="#"><i class="fab fa-facebook-f"></i></a>-->
+                <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
+                <a href="https://www.instagram.com/ambassadeur.phare/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/@ambassadeur.phare"><i class="fa-brands fa-threads"></i></a>
+                <a href="https://www.tiktok.com/@ambassadeur.harcelement?lang=fr"><i class="fa-brands fa-tiktok"></i></a>
+                <!--<a href="#"><i class="fab fa-linkedin-in"></i></a>-->
+                
+            </div>
+        </div>
+        <div class="footer-row">
+            <p>&copy; 2024 Ambassadeurs pHARe - Tous droits réservés.</p>
+            <p>Contactez-nous : <a href="mailto:contact@ambassadeursphare.fr">contact@ambassadeursphare.fr</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+
+    document.querySelectorAll('.accordion').forEach(accordion => {
+        const header = accordion.querySelector('.accordion-header');
+        const content = accordion.querySelector('.accordion-content');
+        const chevron = accordion.querySelector('.accordion-chevron i');
+    
+        header.addEventListener('click', () => {
+            const isOpen = content.style.display === 'block';
+    
+            if (isOpen) {
+                content.style.display = 'none';
+                chevron.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            } else {
+                content.style.display = 'block';
+                chevron.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            }
+        });
+    });
+    
+            </script>
+
+            <script>
+document.getElementById('file-upload').addEventListener('change', function(event) {
+    const fileListDiv = document.getElementById('file-list');
+    const files = event.target.files;
+    if (files.length > 0) {
+        fileListDiv.innerHTML = '';
+        for (let i = 0; i < files.length; i++) {
+            const fileItem = document.createElement('div');
+            fileItem.textContent = files[i].name;
+            fileListDiv.appendChild(fileItem);
+        }
+    } else {
+        fileListDiv.textContent = 'Aucun fichier sélectionné';
+    }
+});
+
+
+
+
+            </script>
+
+</body>
+</html>
